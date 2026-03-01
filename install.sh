@@ -44,5 +44,6 @@ echo "5. Configuring automatic Zsh launch for Termux SSH..."
 if ! grep -q "exec zsh" ~/.bashrc; then
     echo 'if [ -t 1 ] && [ -x "$(command -v zsh)" ]; then exec zsh; fi' >> ~/.bashrc
 fi
-
+# This line fixes the neofetch "bash" error
+echo 'export SHELL=$(which zsh)' >> ~/.zshrc
 echo "Success! Your workspace is fully automated and ready."
