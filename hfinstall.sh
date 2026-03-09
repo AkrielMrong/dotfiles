@@ -6,7 +6,7 @@ DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 echo "1. Installing system packages..."
 # The "|| true" ensures that a minor repo key error doesn't stop the whole script
 apt-get update || true
-apt-get install -y zsh git curl wget
+apt-get install -y zsh git curl wget fastfetch
 
 echo "2. Installing Oh My Zsh..."
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
